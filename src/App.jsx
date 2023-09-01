@@ -1,22 +1,28 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Home from './components/Home/Home';
+import Bio from './components/Bio/Bio';
+import Projects from './components/Projects/Projects';
+import Blog from './components/Blog/Blog';
+import Contact from './components/Contact/Contact';
 
-const Home = () => <div>Home Page</div>;
-const Bio = () => <div>Bio Page</div>;
-const SoftwareProjects = () => <div>Software Projects Page</div>;
-const BlogPosts = () => <div>Blog Posts Page</div>;
-const Contact = () => <div>Contact Page</div>;
 
 function App() {
   return (
+    <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/bio" element={<Bio />} />
-        <Route path="/software-projects" element={<SoftwareProjects />} />
-        <Route path="/blog-posts" element={<BlogPosts />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
+      </div>
   );
 }
 
