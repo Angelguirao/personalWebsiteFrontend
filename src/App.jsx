@@ -11,12 +11,15 @@ import Projects from './components/Projects/Projects';
 import Blog from './components/Blog/Blog';
 import Contact from './components/Contact/Contact';
 
+import NewProject from './components/Projects/NewProject';
 import ProjectList from './components/Projects/ProjectList';
 import ProjectDetails from './components/Projects/ProjectDetails';
-import NewProject from './components/Projects/NewProject';
 import UpdateProject from './components/Projects/UpdateProject';
-import DeleteProject from './components/Projects/DeleteProject';
 
+import NewBlogPost from './components/Blog/NewBlogPost';
+import BlogPostsList from './components/Blog/BlogPostsList';
+import BlogPostDetails from './components/Blog/BlogPostDetails';
+import UpdateBlogPost from './components/Blog/UpdateBlogPost';
 
 function App() {
   return (
@@ -26,13 +29,16 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/bio" element={<Bio />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/list" element={<ProjectList />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/projects/:id" element={<ProjectDetails />} />
         <Route path="/projects/new" element={<NewProject />} />
+        <Route path="/projects/list" element={<ProjectList />} />
+        <Route path="/projects/:id" element={<ProjectDetails />} />
         <Route path="/projects/update/:id" element={<UpdateProject />} />
-        <Route path="/projects/delete/:id" element={<DeleteProject />} />
+        <Route path="/blogPosts/new" element={<NewBlogPost />} />
+        <Route path="/blogPosts/list" element={<BlogPostsList />} />
+        <Route path="/blogPosts/:id" element={<BlogPostDetails />} />
+        <Route path="/blogPosts/update/:id" element={<UpdateBlogPost />} />
       </Routes>
       <Footer />
       </div>
